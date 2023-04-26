@@ -1,0 +1,165 @@
+body {
+    background-color: #d49ca4;
+}
+
+body {
+    margin: 0;
+}
+
+
+#menu {
+    list-style: none;
+    float: left;
+
+}
+
+#menu li {
+    position: relative;
+    float: left;
+
+}
+
+#menu li a {
+    color: #240c13;
+    text-decoration: none;
+    padding: 20px;
+
+}
+
+#logo {
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+
+
+}
+
+h1 {
+    color: #240c13;
+
+}
+
+
+#imagem {
+    position: absolute;
+    top: 10%;
+    left: 43%;
+}
+
+.box {
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #9e6971;
+    padding: 15px;
+    border-radius: 15px;
+    width: 500px;
+}
+
+legend {
+    border: none
+}
+
+.inputbox {
+    position: relative;
+}
+
+
+
+.labelinput {
+    position: relative;
+    top: 0px;
+    pointer-events: none;
+    transition: .5px;
+
+}
+
+
+
+
+.inputuser {
+
+    background: none;
+    border: black;
+    border-bottom: 1px solid rgb(228, 158, 158);
+    outline: 1px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    width: 40%;
+    letter-spacing: 2px;
+
+}
+
+.agendar {
+    left: 100%;
+    border: 2px;
+    border: black;
+}
+
+
+
+.label2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+
+    top: -20px;
+    font-size: px;
+
+}
+
+#hora {
+    background-color: transparent;
+
+
+
+}
+
+fieldset {
+    border: 0px solid #f7376e;
+}
+
+legend {
+    border: 1px solid #f7376e;
+    padding: 10px;
+    text-align: center;
+    background-color: #f7376e;
+    border-radius: 8px;
+    color: white;
+}
+
+
+#agendar {
+    border-bottom: 2px;
+}
+
+p {
+    font-size: 20px;
+}
+
+#agendar {
+    border: 2px;
+}
+
+#enviar {
+    background-color: transparent;
+
+}
+
+img {
+    border-radius: 30%;
+    width: 50px;
+}
+
+.img {
+    border-radius: 50%;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
