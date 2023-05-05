@@ -3,6 +3,7 @@
 <head>
     <title>Agendamento</title>
     <link rel="stylesheet" href="agendamentocss.css">
+    
 
 </head>
 
@@ -35,7 +36,7 @@
     </div>
     <div class="box">
 
-        <form action="" method="post">
+        <form name="form1" method="post" action="grava.jsp" >
 
             <fieldset>
                 <br><br><br><br>
@@ -47,29 +48,33 @@
 
                     <br>
                     <div class="inputbox">
-                        <input class="inputuser" type="text" id="nome" name="nome">
+                        <input class="inputuser" type="text" id="nome" name="txtNome">
+                        <span id="erroNome"></span>
                         <label for="nome" class="label2">Nome Completo</label>
                     </div>
                     <br><br>
 
                     <div class="inputbox">
-                        <input class="inputuser" type="tel" id="telefone" name="telefone ">
+                        <input class="inputuser" type="tel" id="telefone" name="txtTelefone">
+                        <span id="erroTlefone"></span>
+                        
                         <label for="telefone" class="label2">Telefone</label>
                     </div>
                     <br><br>
                     <div class="inputbox">
                         <form>
 
-                            <label for="data">Data:</label>
-
-                            <input class="inputuser" type="date" id="data" name="data"><br><br>
-
+                            <label for="data">Data:</label> <br>
+                           
+                            <input class="inputuser" type="date" id="data" name="txtdata">
+                            <span id="erroData"></span><br><br><br
 
 
                             <label for="hora">Horário:</label>
 
-                            <select id="hora" name="hora">
-
+                            <select id="hora" name="txthora">
+                                
+                                <option value="--">--</option>
                                 <option value="9:00">9:00</option>
 
                                 <option value="10:00">10:00</option>
@@ -90,6 +95,7 @@
                                 <option value="18:00">18:00</option>
 
                             </select </ </select><br><br>
+                            <span id="erroHora"></span>
 
 
 
@@ -100,21 +106,19 @@
                         <center>
                             <p><b>Serviços</p>
                         </center>
-                        <input type="radio" id="serviços" name="serviço" value="alongamento">
-                        <label for="serviços">Pé e Mão</label>
-
-                        <input type="radio" id="serviços" name="pé simples" value="pé simples">
-                        <label for="pé simples">Pé</label>
-
-                        <input type="radio" id="serviços" name="mão simples" value="mão simples">
-                        <label for="mão simples">Mão </label>
-
-                        <input type="radio" id="serviços" name="banho de gel" value="banho de gel">
-                        <label for="banho de gel">Sobrancelha</label>
+                       <select  name="txtservicos" id="serviços">
+                        <option value="">selecione o serviço</option>
+                        <option value="Pé e Mão">Pé e Mão</option>
+                        <option value="Pé">Pé</option>
+                        <option value="Mão">Mão</option>
+                        <option value="Sobrancelha">Sobrancelha</option>
+                       </select>
+                       <span id="erroserviço"></span>
+                       
 
                     </div>
                     <br>
-                    <input id="enviar" type="reset" value="enviar">
+                    <input id="enviar" type="button" value="enviar" onclick="verificar()">
             </fieldset>
 
 
@@ -122,6 +126,57 @@
 
         </form>
     </div>
+    <script>
+        function verificar()
+        {
+            var ok = true ;
+            var n = document.form1.txtNome.value  ;
+            if( n.length == 0  ){
+                ok = false ;
+                document.querySelector('#erroNome')
+                    .textContent = "Preencha o campo nome" ;
+            }
+            var ok = true ;
+            var n = document.form1.txtTelefone.value  ;
+            if( n.length == 0  ){
+                ok = false ;
+                document.querySelector('#erroTlefone')
+                    .textContent = "Preencha o campo telefone" ;
+            }
+            var ok = true ;
+            var n = document.form1.txtdata.value  ;
+            if( n.length == 0  ){
+                ok = false ;
+                document.querySelector('#erroData')
+                    .textContent = "Preencha o campo data" ;
+            }
+            var ok = true ;
+            var n = document.form1.txtdata.value  ;
+            if( n.length == 0  ){
+                ok = false ;
+                document.querySelector('#erroData')
+                    .textContent = "Preencha o campo data" ;
+            }
+            var ok = true ;
+            var n = document.form1.txthora.value  ;
+            if( n.length == 0  ){
+                ok = false ;
+                document.querySelector('#erroHora')
+                    .textContent = "Preencha o campo hora" ;
+            }            
+            var ok = true ;
+            var n = document.form1.txtservicos.value  ;
+            if( n.length == 0  ){
+                ok = false ;
+                document.querySelector('#erroserviço')
+                    .textContent = "Preencha o campo serviços" ;
+            }
+            if(ok){
+                document.form1.submit();
+            }
+        }
+    </script>
+    
 
     <nav class="img">
         <a href="https://instagram.com/nailstudiokvianelo?igshid=ODM2MWFjZDg=" target="_blank">
